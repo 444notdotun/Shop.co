@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&display=swap');
+.loginWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+  max-width: 98vw;
+  min-height: 540px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.18);
+  border: 2px solid rgba(197, 200, 255, 0.3);
+  font-family: 'Barlow', sans-serif;
+  margin: auto;
+}
+.loginLeft {
+  position: relative;
+  background: 
+      url('https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=700&q=80')
+  scroll  ;
+  display: flex;
+  align-items: flex-end;
+  padding: 36px 32px;
+  min-height: 520px;
+}
+.loginLeft::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.08) 0%,
+    rgba(0, 0, 0, 0.5) 55%,
+    rgba(0, 0, 0, 0.82) 100%
+  );
+}
+.loginLeft::after {
+  content: '✦';
+  position: absolute;
+  top: 30px;
+  left: 26px;
+  color: white;
+  font-size: 20px;
+  opacity: 0.9;
+}
+.loginLeft h2 {
+  position: relative;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.05;
+  color: wheat;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+.loginLeft h2::after {
+  content: '✦';
+  position: absolute;
+  bottom: -28px;
+  right: -14px;
+  font-size: 16px;
+  opacity: 0.85;
+}
+.loginRight {
+  background: #ffffff;
+  padding: 44px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: fadeSlideIn 0.5s ease both;
+}
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.loginRight > h1:first-child {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #111111;
+  margin-bottom: 20px;
+}
+.loginRight > h1:nth-child(2) {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  line-height: 1.05;
+  letter-spacing: 1.5px;
+  color: #111111;
+  margin-bottom: 8px;
+}
+.loginRight > h4 {
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: #888888;
+  margin-bottom: 20px;
+}
+.loginRight form {
+  display: flex;
+  flex-direction: column;
+}
+.loginRight form h3 {
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #111111;
+  margin-bottom: 6px;
+  margin-top: 14px;
+  text-transform: uppercase;
+}
+.loginRight form input[type='text'],
+.loginRight form input[type='password'] {
+  padding: 11px 14px 11px 38px;
+  border: 1.5px solid #d4d4d4;
+  border-radius: 10px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.88rem;
+  color: #111111;
+  background-color: #ffffff;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.loginRight form input[type='text']:focus,
+.loginRight form input[type='password']:focus {
+  border-color: #111111;
+}
+.loginRight form input[type='text'] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23aaa' viewBox='0 0 24 24'%3E%3Cpath d='M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 12px center;
+}
+.loginRight form input[type='password'] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23aaa' viewBox='0 0 24 24'%3E%3Cpath d='M12 1a5 5 0 0 0-5 5v2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2h-2V6a5 5 0 0 0-5-5zm0 2a3 3 0 0 1 3 3v2H9V6a3 3 0 0 1 3-3zm0 9a2 2 0 1 1 0 4 2 2 0 0 1 0-4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 12px center;
+}
+.passwordRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+.passwordRow h3 {
+  margin: 0;
+}
+.passwordRow p {
+  font-size: 0.75rem;
+  color: #888888;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.passwordRow p:hover {
+  color: #111111;
+  text-decoration: underline;
+}
+.loginBtnWrap {
+  margin-top: 20px;
+}
+.loginBtnWrap button {
+  width: 100%;
+  padding: 13px;
+  background: #111111;
+  color: #ffffff;
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+.loginBtnWrap button:hover {
+  background: #333;
+  transform: translateY(-1px);
+}
+.loginRight hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 22px 0;
+  position: relative;
+}
+.loginRight hr::before {
+  content: 'OR CONTINUE WITH';
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  padding: 0 10px;
+  font-size: 0.6rem;
+  letter-spacing: 1.5px;
+  color: #888888;
+  white-space: nowrap;
+}
+.socialBtns {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.socialBtns button {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 50px;
+  background: #ffffff;
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #111111;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.2s, border-color 0.2s;
+}
+.socialBtns button:hover {
+  background: #f5f5f5;
+  border-color: #bbb;
+}
+.socialBtns button:first-child::before {
+  content: 'G';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  background: #4285f4;
+  color: white;
+  font-size: 0.68rem;
+  font-weight: 700;
+  border-radius: 3px;
+}
+.socialBtns button:last-child::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.7 9.05 7.4c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.39-1.32 2.76-2.54 4zm-3.11-17.5c.06 2.06-1.56 3.76-3.43 3.61-.24-1.94 1.56-3.76 3.43-3.61z' fill='%23000'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+}
+.signupText {
+  font-size: 0.8rem;
+  color: #888888;
+  text-align: center;
+}
+.signupText span {
+  color: #111111;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

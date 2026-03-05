@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --black: #111111;
+  --white: #ffffff;
+  --gray-border: #d4d4d4;
+  --gray-text: #888888;
+  --gray-label: #555555;
+  --radius: 6px;
+}
+
+.register-wrapper {
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: auto;
+  animation: fadeUp 0.45s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateX(160px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.register-wrapper h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.6rem, 6vw, 3.8rem);
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: var(--black);
+  line-height: 1;
+  margin-bottom: 36px;
+}
+
+.register-wrapper > div:not(.checkbox-row) {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.register-wrapper > div p,
+.register-wrapper > div > p {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  color: var(--black);
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+
+.register-wrapper input[type='text'],
+.register-wrapper input[type='password'],
+.register-wrapper input[type='email'] {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1.5px solid var(--black);
+  border-radius: var(--radius);
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.92rem;
+  color: var(--black);
+  background: var(--white);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.register-wrapper input[type='text']::placeholder,
+.register-wrapper input[type='password']::placeholder,
+.register-wrapper input[type='email']::placeholder {
+  color: #bbb;
+  font-weight: 400;
+}
+
+.register-wrapper input[type='text']:focus,
+.register-wrapper input[type='password']:focus,
+.register-wrapper input[type='email']:focus {
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.08);
+}
+
+.register-wrapper > div:has(input[type='password'])::after {
+  content: '';
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  width: 20px;
+  height: 20px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' stroke='%23aaa' stroke-width='1.8' viewBox='0 0 24 24'%3E%3Cpath d='M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94'/%3E%3Cpath d='M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19'/%3E%3Cline x1='1' y1='1' x2='23' y2='23'/%3E%3C/svg%3E") center/contain no-repeat;
+  pointer-events: none;
+}
+
+.checkbox-row {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px !important;
+}
+
+.checkbox-row input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--black);
+  cursor: pointer;
+  flex-shrink: 0;
+  border: 1.5px solid var(--black);
+}
+
+.checkbox-row p {
+  font-size: 0.82rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  color: var(--gray-label) !important;
+  text-transform: none !important;
+  margin: 0 !important;
+}
+
+.checkbox-row p a,
+.checkbox-row p span {
+  color: var(--black);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+.register-wrapper > button {
+  width: 100%;
+  padding: 15px;
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  margin-bottom: 20px;
+}
+
+.register-wrapper > button:hover {
+  background: #2a2a2a;
+  transform: translateY(-1px);
+}
+
+.register-wrapper > button:active {
+  transform: translateY(0);
+}
+
+.register-wrapper > p:last-child {
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--gray-text);
+}
+
+.register-wrapper > p:last-child a {
+  color: var(--black);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
