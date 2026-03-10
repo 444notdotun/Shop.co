@@ -45,7 +45,7 @@ const TopSelling = () => {
                 ))}
             </div>
             {limit < products.length && (
-                <button className={Styles['view-btn']} ><Link to="/viewall2">View All</Link></button>
+                <button className={Styles['view-btn']} ><Link to="/viewall2" style={{textDecoration}}>View All</Link></button>
             )}
         </div>
     )

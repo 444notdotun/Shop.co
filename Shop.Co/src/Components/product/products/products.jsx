@@ -3,6 +3,8 @@ import NewArrival from "../newArrivals/newArrival";
 import TopSelling from "../Top Sellling/topSelling";
 import Navbar from "../../Register/navbar/navbar";
 import Footer from "../../Register/footer/footer";
+import Browse from "../BrowseBYDressStyle/browse";
+import Review from "../Review/review";
 const Products = () => {
     return (
         <div>
@@ -10,9 +12,9 @@ const Products = () => {
             <Page1 />
             <NewArrival />
             <TopSelling/>
+            <Browse></Browse>
+            <Review></Review>
             <Footer></Footer>
-
-            
         </div>
     )
 }

@@ -4,6 +4,7 @@ import Register from '../Components/Register/register/register';
 import Products from '../Components/product/products/products';
 import ViewAll from '../Components/product/viewAll/viewAll';
 import Viewall2 from '../Components/product/viewAll2/viewall2';
+import ProductDetail from '../Components/product/item/item';
 
 const routes = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const routes = createBrowserRouter([
    {
     path: "register/products",
     element: <Products />
+  },
+  {
+    path:"item/:id",
+    element:<ProductDetail/>
   }
 ])
 
